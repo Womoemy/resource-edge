@@ -1,38 +1,281 @@
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Circular Std', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  padding: 14px 16px;
+}
+.navitems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 32px;
+  margin: auto;
+}
+/* .leftnav {
+  border: 1px dashed red;
+} */
+/* .rightnav {
+  border: 1px solid green;
+} */
+.logomini {
+  height: 32px;
+  width: 32px;
+}
+.menubtn {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.menu {
+  width: 24px;
+  height: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.HeroBox {
+  /* margin-left: 16px;
+  margin-right: 16px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  padding:  38px 0px 0px;
+  position: static;
+  /* width: 343px; */
+  /* top: 100px; */
+  /* border: 1px dashed black; */
+}
+.HeroItems {
+  width: 343px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.HeroHeader {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0px;
+  text-align: left;
+  /* position: relative; */
+  width: 301px;
+  top: 0px;
+  color: #091E42;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px 12px 0px;
+}
+.HeroText {
+  /* position: static; */
+  width: 245px;
+  height: 61px;
+  left: 0px;
+  top: 138px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 143%;
+  color: #344563;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 12px 0px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.HeroImg {
+  height: auto;
+  width: 100%;
+  top: 322px;
+  border-radius: 0px;
+  position: static;
+  /* bottom: 85.85%; */
+  background: #FFFFFF;
+  /* border: 1px dashed black; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.InfoCard {
+  /* padding: 32px, 32px, 40px, 32px; */
+
+  background: #FFFFFF;
+  box-shadow: 0px 18px 31px rgba(9, 30, 66, 0.06);
+  border-radius: 16px;
+
+  margin-bottom: 16px;
+  /* margin-left: 16px;
+  margin-right: 16px; */
+  width: 343px;
+  /* height: max-content; */
+  /* border-style: ; */
+
+  /* position: static; */
+  /* position: relative; */
+  /* text-align: center; */
+
+  /* border: 1px none black; */
+}
+#ClearInfoCard {
+  background: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.InfoItems {
+  /* border: 1px hidden black; */
+  /* position: relative; */
+  /* position: absolute; */
+
+  width: 278px;
+  /* margin: 32px; */
+  padding: 32px;
+  /* height: fit-content; */
+}
+
+.InfoImg {
+  width: 48px;
+  height: 48px;
+
+  /* border: 1px dashed black; */
+}
+.InfoHeader {
+  margin-top: 32px;  
+  width: 278px;
+  height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: #091E42;
+
+  /* border: 1px dashed black; */
+}
+.InfoText {
+  /* position: relative; */
+  margin-top: -18px;
+  width: 278px;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5E6C84;
+  /* border: 1px dashed black; */
+}
+
+
+.SectionHeader {
+  /* width: 343px; */
+  height: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #091E42;
+  /* margin-left: 16px;
+  margin-right: 16px; */
+}
+.SectionDesc {
+  width: 343px;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5E6C84;
+  /* margin-left: 16px;
+  margin-right: 16px; */
+}
+.Section1, .Section2, .Section3 {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.Section1 {
+  background: #F4F5F7;
+}
+
+.SectImg {
+  margin-top: 56px;
+}
+
+.BrandBox {
+  display: flex;
+  width: 375px;
+  height: 200px;
+  /* border: 1px solid black; */
+}
+.BrandLogos {
+  margin: auto;
+  width: 343px;
+  display: flex;
+  flex-flow:row wrap;
+  align-content: space-between;
+  row-gap: 32px;
+}
+.BrandImg {
+  margin-left: 24px;
+}
+
+.Footer {
+  display: flex;
+  width: 375px;
+  height: 337px;
+  background: #091E42;
+  border: 1px solid black;
+}
+.FooterInner {
+  margin: auto;
+  width: 275px;
+  text-align: center;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  row-gap: 48px;
+  /* border: 1px dashed yellow; */
+}
+.FooterHeader {
+  /* border: 1px dashed red; */
+  width: inherit;
+}
+.FooterHeader > h4 {
+  color: #FFFFFF;
+  /* top: 36px; */
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 145%;
+  margin-top: 8px;
+  width: 275px;
+  /* overflow-wrap: break-word; */
+}
+.FooterBody {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  row-gap: 48px;
+  width: inherit;
+  /* border: 1px dashed red; */
+}
+.SocialLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150px;
+  height: 24px;
+  margin: auto;
+  /* border: 1px solid yellow; */
+}
+.FooterBody > h6 {
+  color: #FAFBFC;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 133%;
+  /* margin-top: 8px; */
+  margin: 0px 48px;
+  overflow-wrap: break-word;
+  width: 185px;
 }
