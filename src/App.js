@@ -20,9 +20,21 @@ import facebook from './assets/facebook.svg';
 import twitter from './assets/twitter.svg';
 import linkedin from './assets/linkedin.svg';
 import instagram from './assets/instagram.svg';
-import logoFull from './aassets/logofull.svg';
+import logoFull from './assets/logofull.svg';
 import close from './assets/cross.svg';
 import './App.css';
+
+
+function Dropdown() {
+  return (
+    <>
+      <NavBar />
+    </>
+  );
+}
+
+
+
 
 
 function NavBar() {
@@ -32,7 +44,7 @@ function NavBar() {
           <div className='leftnav'>
             <img className="logomini" src={logoMini} alt="Resource Edge"/>
             <img className='logofull' src={logoFull} alt='Resource Edge'/>
-            <ul>
+            <ul className='navlinks'>
               <li>Features</li>
               <li>About</li>
             </ul>
@@ -40,9 +52,9 @@ function NavBar() {
           <div className='rightnav'>
             <div className='menubtn'><img className="menu" src={menu} alt="" /></div>
             <div className='closebtn'><img className='close' src={close} alt='' /></div>
-            <div className='authbtngrp'>
-              <button className='signup'>Sign up</button>
-              <button className='signin'>Sign in</button>
+            <div className='btngrp'>
+              <button className='btn signup'>Sign up</button>
+              <button className='btn signin'>Sign in</button>
             </div>
           </div>  
       </div> 
@@ -65,10 +77,14 @@ function HeroSect() {
 function Section1() {
   return(
     <section className="Section1">
-      <Section header="Human Resources" desc="Onboard new employees, manage the employee lifecycle and measure employee performance." />    
-      <InfoCard image={image1} header="Employee Management" text="From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."/>
-      <InfoCard image={image2} header="Performance Management" text="Manage and track employee performance with our easy-to-use tools for goal setting, performance agreements and performance reviews."/>
-      <InfoCard image={image3} header="Paid time off" text="Employees can request for paid time off, vacations, sick leaves or educational leaves and get approvals all within Resource Edge. HR managers can equally ensure compliance."/>
+      <div>
+        <Section header="Human Resources" desc="Onboard new employees, manage the employee lifecycle and measure employee performance." />
+        <div className='sectcards'>
+          <InfoCard image={image1} header="Employee Management" text="From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."/>
+          <InfoCard image={image2} header="Performance Management" text="Manage and track employee performance with our easy-to-use tools for goal setting, performance agreements and performance reviews."/>
+          <InfoCard image={image3} header="Paid time off" text="Employees can request for paid time off, vacations, sick leaves or educational leaves and get approvals all within Resource Edge. HR managers can equally ensure compliance."/>
+        </div>  
+      </div>  
       <img className='SectImg' src={sectImg1} alt=''/>
     </section>  
   );
@@ -77,9 +93,13 @@ function Section1() {
 function Section2() {
   return (
     <section className="Section2">
-      <Section header="Admin & Logistics" desc="Manage and track company assets as well as logistics for travelling employees"/>
-      <InfoCard id="ClearInfoCard" image={image4} header="Travel & Logistics" text="Make travel requests, get approvals, and have access to travel information."/>
-      <InfoCard id="ClearInfoCard" image={image5} header="Asset Management" text="Manage the acquisition, assignment, and disposition of assets seamlessly."/>
+      <div className='sectionDiv'>
+        <Section header="Admin & Logistics" desc="Manage and track company assets as well as logistics for travelling employees"/>
+        <div className='clearsectcards'>
+          <InfoCard id="ClearInfoCard" image={image4} header="Travel & Logistics" text="Make travel requests, get approvals, and have access to travel information."/>
+          <InfoCard id="ClearInfoCard" image={image5} header="Asset Management" text="Manage the acquisition, assignment, and disposition of assets seamlessly."/>
+        </div>
+      </div>
       <img className='SectImg' src={sectImg2} alt=''/>
     </section>
   );
@@ -88,9 +108,13 @@ function Section2() {
 function Section3() {
   return (
     <section className="Section3">
-      <Section header="Finance" desc="Generate invoices, track expenditure, and manage complex payrolls for multiple teams and companies"/>
-      <InfoCard id="ClearInfoCard" image={image6} header="RE Vouchers" text="Track and manage expenditure for multiple teams across your organisation using Resource Edge Vouchers"/>
-      <InfoCard id="ClearInfoCard" image={image7} header="Payroll" text="Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes."/>
+      <div className='sectionDiv'>
+        <Section header="Finance" desc="Generate invoices, track expenditure, and manage complex payrolls for multiple teams and companies"/>
+        <div className='clearsectcards'>
+          <InfoCard id="ClearInfoCard" image={image6} header="RE Vouchers" text="Track and manage expenditure for multiple teams across your organisation using Resource Edge Vouchers"/>
+          <InfoCard id="ClearInfoCard" image={image7} header="Payroll" text="Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes."/>
+        </div>       
+      </div>
       <img className='SectImg' src={sectImg3} alt=''/>
     </section>
   );
@@ -100,10 +124,15 @@ function Brands() {
   return (
     <div className='BrandBox'>
       <div className='BrandLogos'>
-        <img src={unnImg} className='BrandImg' alt=''/>
-        <img src={genesysImg} className='BrandImg' alt=''/>
-        <img src={estateImg} className='BrandImg' alt=''/>
-        <img src={teneceImg} className='BrandImg' alt=''/>
+        <div className='brandgrp1'>
+          <img src={unnImg} className='BrandImg' alt=''/>
+          <img src={genesysImg} className='BrandImg' alt=''/>
+        </div>
+        <div className='brandgrp2'>
+          <img src={estateImg} className='BrandImg' alt=''/>
+          <img src={teneceImg} className='BrandImg' alt=''/>
+        </div>
+        
       </div>
     </div>
   );
@@ -119,12 +148,12 @@ function Footer() {
         </div>
         <div className='FooterBody'>
           <div className='SocialLinks'>
-            <img src={facebook} className='' alt=''/>
-            <img src={twitter} className='' alt=''/>
-            <img src={linkedin} className='' alt=''/>
-            <img src={instagram} className='' alt=''/>
+            <img src={facebook} className='social-icon' alt=''/>
+            <img src={twitter} className='social-icon' alt=''/>
+            <img src={linkedin} className='social-icon' alt=''/>
+            <img src={instagram} className='social-icon' alt=''/>
           </div>
-          <h6 className='CopyrightInfo'>Copyright © Genesys DevStudio. All rights reserved.</h6>
+          <h4 className='CopyrightInfo'>Copyright &copy; Genesys DevStudio . All rights reserved.</h4>
         </div>
         
       </div>
@@ -137,8 +166,10 @@ function InfoCard(props) {
     <div className="InfoCard" id={props.id}> 
       <div className="InfoItems">
         <img className="InfoImg" src={props.image} alt="" />
-        <h4 className="InfoHeader">{props.header}</h4>
-        <p className="InfoText">{props.text}</p>
+        <div className='infowords'>
+          <h4 className="InfoHeader">{props.header}</h4>
+          <p className="InfoText">{props.text}</p>
+        </div>
       </div>    
     </div>
   );
@@ -146,10 +177,10 @@ function InfoCard(props) {
 
 function Section(props) {
   return (
-    <div className='SectionItems'>
+    <div className='SectionTexts'>
       <h3 className='SectionHeader'>{props.header}</h3>
       <p className='SectionDesc'>{props.desc}</p>
-    </div>
+    </div> 
   );
 }
 
