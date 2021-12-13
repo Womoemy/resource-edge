@@ -433,8 +433,7 @@
     line-height: 120%;
   }
   .HeroText {
-    /* width: auto; */
-    width: 75%;
+    width: auto;
     font-style: normal;
     font-weight: 450;
     font-size: 16px;

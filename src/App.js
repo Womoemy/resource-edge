@@ -25,16 +25,6 @@ import close from './assets/cross.svg';
 import './App.css';
 
 
-function Dropdown() {
-  return (
-    <>
-      <NavBar />
-    </>
-  );
-}
-
-
-
 
 
 function NavBar() {
