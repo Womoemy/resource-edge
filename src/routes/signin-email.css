@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Circular Std', sans-serif;
+}
+.loginCard {
+  display: block;
+  width: 40%;
+  margin: 48px auto 0px;
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 11px;
+  margin: 0px 0px 48px;
+}
+.logo {
+  height: 32px;
+}
+.loginForm {
+  width: 100%;
+  margin-top: 48px;
+  padding: 40px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31);
+  border-radius: 8px;
+}
+.formTitle {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #091E42;
+  margin-bottom: 16px;
+}
+.formTitle p {
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #42526E;
+  margin-bottom: 4px;
+}
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #091E42;
+}
+input {
+  outline: none;
+  width: 100%;
+  padding: 8px 12px;
+  height: 40px;
+  border: 1px solid #DFE1E6;
+  border-radius: 4px;
+}
+input::-webkit-input-placeholder {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: #97A0AF;
+}
+input::-moz-placeholder {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: #97A0AF;
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: #97A0AF;
+}
+input:-moz-placeholder {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: #97A0AF;
+  opacity: 1;
+}
+input[type="email"]:focus {
+  border: 2px solid #4C9AFF;
+}
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  border: none;
+  height: auto;
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+.login {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #A5ADBA;
+  background-color: #F4F5F7;
+  margin: 30px 0px;
+  height: 40px;
+  width: 100% !important;
+}
+hr {
+  border: 1px solid #DFE1E6;
+}
+.forgotPwd {
+  color: #0052CC;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 16px;
+}
+.bgImgL {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  transform: scale(0.8);
+}
+.bgImgR {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  transform: scale(0.8);
+}
+.formBody {
+  display: flex;
+  flex-direction: column;
+}
+#checkImg {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  transform: translate(-130%, 30%);
+}

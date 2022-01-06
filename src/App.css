@@ -1,10 +1,9 @@
-.App {
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Circular Std', sans-serif;
 }
-
 .navbar {
   position: sticky;
   top: 0;
@@ -18,26 +17,69 @@
   height: 32px;
   margin: auto;
 }
-/* .leftnav {
-  border: 1px dashed red;
-} */
-/* .rightnav {
-  border: 1px solid green;
-} */
 .logomini {
   height: 32px;
   width: 32px;
 }
-.menubtn {
+.menubtn, .closebtn {
   margin-top: 4px;
   margin-bottom: 4px;
-}
-.menu {
   width: 24px;
   height: 24px;
 }
+
 .logofull, .navlinks, .btngrp, .closebtn{
   display: none;
+}
+
+/* Dropdown styling */
+.dropdownNav {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px ;
+  justify-content: space-between;
+  row-gap: 48px;
+  position: fixed;
+  width: 100vw;
+  background-color: #FFFFFF;
+}
+.authBtns {
+  display: flex;
+  flex-direction: column;
+  width: 90% ;
+}
+.btn {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    border: none;
+    height: auto;
+    padding: 10px 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+.logInOut {
+    background-color: #0052CC;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+.signup {
+  background-color: #F4F5F7;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #A5ADBA;
+  margin-top: 16px;
+}
+.dropdown-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 32px;
 }
 
 
@@ -47,7 +89,6 @@
   align-items: flex-start;
   padding:  38px 0px 0px;
   position: static;
-  /* border: 1px dashed black; */
 }
 .HeroItems {
   width: 343px;
@@ -56,14 +97,11 @@
 }
 .HeroHeader {
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0px;
   text-align: left;
-  /* position: relative; */
-  width: 301px;
-  /* width: auto; */
+  width: 80%;
   top: 0px;
   color: #091E42;
   flex: none;
@@ -72,13 +110,11 @@
   margin: 0px 0px 12px 0px;
 }
 .HeroText {
-  /* position: static; */
-  width: 245px;
+  width: 65%;
   height: 61px;
   left: 0px;
   top: 138px;
   text-align: left;
-  font-style: normal;
   font-weight: 450;
   font-size: 14px;
   line-height: 143%;
@@ -95,9 +131,6 @@
   top: 322px;
   border-radius: 0px;
   position: static;
-  /* bottom: 85.85%; */
-  /* background: #FFFFFF; */
-  /* border: 1px dashed black; */
 }
 
 .InfoCard {
@@ -106,10 +139,7 @@
   border-radius: 16px;
   margin-bottom: 16px;
   width: auto;
-  /* min-width: 343px; */
   padding: 32px;
-  /* display: flex; */
-  /* border: 5px dashed black; */
 }
 #ClearInfoCard {
   background: none;
@@ -121,47 +151,33 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  /* justify-content: flex-start; */
-  /* border: 1px dashed red; */
-  /* padding: 32px; */
-  
 }
 
 .InfoImg {
   width: 48px;
   height: 48px;
-
-  /* border: 1px dashed black; */
 }
 .infowords {
-  /* border: 1px solid deeppink; */
   padding: 0;
   margin: 0;
 }
 
 .InfoHeader {
-  /* margin-top: 32px;   */
-  /* width: 278px; */
   width: auto;
   height: 24px;
-  font-style: normal;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: #091E42;
-
-  /* border: 1px dashed black; */
 }
 .InfoText {
-  margin-top: -18px;
+  margin-top: 18px;
   width: auto;
-  /* width: 278px; */
   font-style: normal;
   font-weight: 450;
   font-size: 14px;
   line-height: 20px;
   color: #5E6C84;
-  /* border: 1px dashed black; */
 }
 
 .SectionTexts {
@@ -169,14 +185,10 @@
   flex-direction: column;
   row-gap: 16px;
   width: auto;
-  /* border: 1px solid black; */
 }
 .SectionHeader {
-  /* border: 1px dashed black; */
   margin: 0;
-  /* width: 343px; */
   width: auto;
-  /* height: 32px; */
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -192,37 +204,20 @@
   line-height: 20px;
   color: #5E6C84;
 }
-
-/* .sectcards {
-  border: 1px solid black;
-} */
-
 .SectImg {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  /* border: 1px solid black; */
-  /* margin-top: 56px; */
 }
-
 .Section1, .Section2, .Section3 {
   padding: 80px 16px 50px;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-  /* border: 1px solid yellow; */
-
-  /* padding-top: 80px;
-  padding-bottom: 50px;
-  padding-left: 16px;
-  padding-right: 16px; */
 }
 .Section1 {
   background: #F4F5F7;
 }
-
-
-
 .BrandBox {
   padding: 50px 0;
   display: flex;
@@ -297,14 +292,12 @@
   font-weight: 450;
   font-size: 12px;
   line-height: 133%;
-  /* margin-top: 8px; */
   margin: 0 auto;
   overflow-wrap: break-word;
   width: 185px;
 }
 
 @media screen and (min-width: 576px) and (min-height: 0px) {
-
   .navbar {
     position: sticky;
     top: 0;
@@ -317,13 +310,11 @@
     justify-content: space-between;
     height: auto;
     margin: auto 9%;
-    /* border: 1px dashed black; */
   }
-  .logomini {
+  .logomini, .dropdownNav {
     display: none;
   }
   .leftnav {
-    /* border: 1px dashed red; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -334,25 +325,11 @@
     width: 144px;
     height: 24px;
     margin: auto;
-  }
-  .rightnav {
-    display: flex;
-    flex-direction: row;   
-    height: 40px;
-    width: auto;
-    /* border: 1px dashed black; */
-  }
-  .menubtn {
-    display: none;
-  }
-  .closebtn {
-    display: none;
-  }
+  }  
   .navlinks {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -361,13 +338,13 @@
   .navlinks > li {
     margin: auto;
   }
+  .menubtn, .closebtn {
+    display: none !important;
+  }
   .btngrp {
-    /* width: 145px; */
-    width: auto;
-    /* height: 40px; */
-    height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     column-gap: 4px;
     margin: auto;
   }
@@ -377,52 +354,42 @@
     display: inline-block;
     border: none;
     height: auto;
-    /* width: auto; */
-    /* height: 40px; */
-    /* width: 145px; */
     padding: 10px 12px;
     border-radius: 4px;
+    width: auto !important;
   }
   .signup {
     background-color: #FFFFFF;
-    /* background-color: #F4F5F7; */
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: #A5ADBA;
+    margin: 0 auto;
   }
   .signin {
     background-color: #0052CC;
     color: #FFFFFF;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
+    margin: 0 auto;
   }
   .HeroBox {
     display: flex;
     flex-direction: row;
     padding: 0 9%;
-    /* max-height: 400px; */
-    /* height: 80%; */
     height: auto;
-    /* height: 70vmin; */
-    /* border: 1px dashed black; */
   }
   .HeroItems {
     width: 40%;
     height: auto;
-    /* border: 1px dashed navy; */
     display: flex;
     flex-direction: column;
     margin: auto;
   }
   .HeroImg {
-    /* border: 1px dashed navy; */
     width: 60%;
     position: static;
-    /* width: auto; */
     height: inherit;
   }
   .HeroHeader {
@@ -469,15 +436,13 @@
     flex-direction: row;
     column-gap: 1.6%;
     width: 81vw;
-    /* border: 1px solid black; */
   }
   .InfoCard {
     background-color: #FFFFFF;
     box-shadow: 0px 18px 31px rgba(38, 42, 49, 0.06);
     border-radius: 16px;
     margin-bottom: 16px;
-    width: 31%;
-  /* min-width: 343px; */
+    width: 33.3%;
     padding: 32px;
   }
   .SectImg {
@@ -494,7 +459,6 @@
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    /* border: 4px dotted yellow; */
   }
   
   .SectionTexts {
@@ -502,7 +466,6 @@
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
-    /* border: 1px dashed navy; */
   }
   .clearsectcards {
     width: 55%;
@@ -510,7 +473,6 @@
     flex-direction: row;
     justify-content: space-between;
     column-gap: 2.5%;
-    /* border: 1px dashed black; */
   }
   #ClearInfoCard {
     width: auto;
@@ -518,20 +480,22 @@
   .BrandBox {
     width: 82%;
     margin: 0 auto;
+    display: flex;
   }
   .BrandLogos {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
     column-gap: 48px;
     width: 100%;
     height: 70px;
-  }
+  }  
   .brandgrp1, .brandgrp2 {
+    display: flex;
+    flex-direction: row;
     column-gap: 48px;
     width: auto;
   }
-  /* .BrandImg {
-    border: 1px solid black;
-  } */
+  
   .Footer {
     padding: 0;
     margin: 0;
@@ -545,13 +509,15 @@
   }
   .FooterHeader {
     margin: 0;
-    justify-content: left;
     text-align: start;
     height: fit-content;
   }
   
+  .FooterHeader h4 {
+    margin: 0;
+  }
+
   .FooterBody {
-    justify-content: right;
     margin: 0;
     width: auto;
     height: auto;

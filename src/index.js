@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Hello from './routes/dashboard';
+import Dashboard from './routes/dashboard';
+import SignInMail from './routes/signin-email';
+import SignInPswd from './routes/signin-password';
+import ResetPassword from './routes/resetpassword';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 ReactDOM.render(
@@ -10,7 +13,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App/>}/>
-        <Route path="user/dashboard" element={<Hello/>}/>
+        <Route path="/signin-email" element={<SignInMail />} />
+        <Route path="/signin-password" element={<SignInPswd />} />
+        <Route path="/dashboard" element={<Dashboard />}/>
+        <Route path="/resetpassword" element={<ResetPassword />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './App.css';
 import logoMini from './assets/logomini.svg';
 import menu from './assets/menu.svg';
 import relaxImg from './assets/relaximg.svg';
@@ -22,35 +25,123 @@ import linkedin from './assets/linkedin.svg';
 import instagram from './assets/instagram.svg';
 import logoFull from './assets/logofull.svg';
 import close from './assets/cross.svg';
-import './App.css';
 
 
 
-
-function NavBar() {
+function LoginBtn(props) {
   return (
-    <nav className="navbar">
-      <div className="navitems">
-          <div className='leftnav'>
-            <img className="logomini" src={logoMini} alt="Resource Edge"/>
-            <img className='logofull' src={logoFull} alt='Resource Edge'/>
-            <ul className='navlinks'>
-              <li>Features</li>
-              <li>About</li>
-            </ul>
-          </div>
-          <div className='rightnav'>
-            <div className='menubtn'><img className="menu" src={menu} alt="" /></div>
-            <div className='closebtn'><img className='close' src={close} alt='' /></div>
-            <div className='btngrp'>
-              <button className='btn signup'>Sign up</button>
-              <button className='btn signin'>Sign in</button>
-            </div>
-          </div>  
-      </div> 
-    </nav>
+    <Link to="/sign-in">
+      <div className='btn logInOut' onClick={props.onClick}>Log In</div>
+    </Link>
   );
 }
+function LogoutBtn (props) { 
+  return (
+    <div className='btn logInOut' onClick={this.onClick}>Log Out</div>
+  );
+}
+
+class AuthCtrl extends React.Component {
+  constructor(props){
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.state = {isLoggedIn: false};
+  }
+  handleLoginClick() {
+    this.setState({isLoggedIn: true});
+  }
+  handleLogoutClick() {
+    this.setState({isLoggedIn: false});
+  }
+
+  render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let btn;
+    if (isLoggedIn) {
+      btn = <LogoutBtn onClick={this.handleLogoutClick} />;
+    } else {
+      btn = <LoginBtn onClick={this.handleLoginClick} />;
+    }
+
+    return (
+      <div>
+        {btn}
+        <button className='btn signup'>Sign up</button>
+      </div>
+    );
+  }
+}
+
+function Dropdown(props) {
+  return (
+    <div className='dropdownNav'>
+      <ul className='dropdown-links'>
+        <li>Features</li>
+        <li>About</li>
+      </ul>
+      <div className='authBtns'>
+         <AuthCtrl />
+      </div>
+     
+    </div>
+  );
+}
+
+class NavBar extends React.Component {
+  constructor (props) {
+    super(props);
+    this.handleMenuBtnClick = this.handleMenuBtnClick.bind(this);
+    this.handleCloseBtnClick = this.handleMenuBtnClick.bind(this);
+    this.state = {clicked: false, displayMenuBtn: 'block', displayCloseBtn: 'none'};
+  }
+
+  handleMenuBtnClick() {
+    this.setState({clicked: !this.state.clicked, displayMenuBtn: 'none', displayCloseBtn: 'block'})
+  }
+
+  handleCloseBtnClick() {
+    this.setState({clicked: !this.state.clicked, displayMenuBtn: 'block', displayCloseBtn: 'none'})
+  }
+
+  render() {
+    return (
+      <>
+        <nav className="navbar">
+          <div className="navitems">
+              <div className='leftnav'>
+                <img className="logomini" src={logoMini} alt="Resource Edge"/>
+                <img className='logofull' src={logoFull} alt='Resource Edge'/>
+                <ul className='navlinks'>
+                  <li>Features</li>
+                  <li>About</li>
+                </ul>
+              </div>
+              <div className='rightnav'>
+                <div className='btngrp'>
+                  
+                  <div className='btn signup'>Sign up</div>
+                
+                  <Link to='/signin-email' style={{textDecoration: "none"}}>
+                    <div className='btn signin'>Sign in</div>
+                  </Link>
+                </div>
+              </div>
+              <img 
+                className='menubtn' 
+                style={{display: this.state.displayMenuBtn}} 
+                onClick={this.handleMenuBtnClick} 
+                src={menu} alt="" 
+              />
+              <img className='closebtn' style={{display: this.state.displayCloseBtn}} onClick={this.handleCloseBtnClick} src={close} alt='' /> 
+          </div> 
+        </nav>
+        {this.state.clicked ? <Dropdown /> : null}
+      </>
+    );
+  }
+}
+
 
 function HeroSect() {
   return (
@@ -176,7 +267,7 @@ function Section(props) {
 
 function App() {
   return (
-    <body className="App">
+    <>
       <NavBar/>
       <HeroSect/>
       <Section1/>
@@ -184,7 +275,7 @@ function App() {
       <Section3/>
       <Brands/>
       <Footer/>
-    </body>   
+    </>   
   );
 }
 
