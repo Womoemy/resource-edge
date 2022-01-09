@@ -8,7 +8,7 @@ body {
   position: sticky;
   top: 0;
   background-color: #FFFFFF;
-  padding: 14px 16px;
+  padding: 12px 16px;
 }
 .navitems {
   display: flex;
@@ -89,6 +89,7 @@ body {
   align-items: flex-start;
   padding:  38px 0px 0px;
   position: static;
+  height: calc(100vh - 56px);
 }
 .HeroItems {
   width: 343px;
@@ -378,7 +379,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 0 9%;
-    height: auto;
+    height: calc(100vh - 52px);
   }
   .HeroItems {
     width: 40%;
@@ -448,9 +449,6 @@ body {
   .SectImg {
     width: 78%;
   }
-  /* .Section1 {
-    border: 1px dashed black;
-  } */
   .sectionDiv {
     display: flex;
     flex-direction: row;
